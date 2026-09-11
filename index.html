@@ -255,13 +255,13 @@ h2 em { font-style: italic; color: #aaa; }
 }
 .service-photo {
   height: 190px;
-  background-image: linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.85)), var(--service-img);
+  background-image: linear-gradient(180deg, rgba(0,0,0,.05), rgba(10,7,8,.75)), var(--service-img);
   background-size: cover; background-position: center;
-  filter: grayscale(100%); transition: transform .9s ease, filter .9s;
+  filter: grayscale(40%) contrast(1.05); transition: transform .9s ease, filter .9s;
   transform: translateZ(0);
 }
 .service-card:hover .service-photo {
-  transform: scale(1.06) translateZ(20px); filter: grayscale(40%);
+  transform: scale(1.06) translateZ(20px); filter: grayscale(0%) contrast(1.08);
 }
 .service-open {
   position: relative; width: 100%; padding: 26px 26px 20px;
@@ -374,57 +374,17 @@ h2 em { font-style: italic; color: #aaa; }
 }
 .gallery-item img {
   width: 100%; height: 100%; object-fit: cover;
-  filter: grayscale(100%); transition: transform .9s ease, filter .9s;
+  filter: grayscale(25%) contrast(1.05); transition: transform .9s ease, filter .9s;
   transform: translateZ(0);
 }
 .gallery-item:hover img {
-  transform: scale(1.06) translateZ(30px); filter: grayscale(30%);
+  transform: scale(1.06) translateZ(30px); filter: grayscale(0%) contrast(1.08);
 }
 .gallery-item figcaption {
   position: absolute; left: 18px; bottom: 16px;
   font-size: 9px; letter-spacing: 3px; color: #fff;
   background: rgba(0,0,0,.55); padding: 8px 12px;
   backdrop-filter: blur(8px);
-}
-
-/* BEFORE & AFTER */
-.ba-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-}
-.ba-card {
-  border: 1px solid var(--line);
-  background: #0c0b0b;
-  overflow: hidden;
-}
-.ba-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
-}
-.ba-before, .ba-after {
-  position: relative;
-  aspect-ratio: 3/4;
-  overflow: hidden;
-}
-.ba-before img, .ba-after img {
-  width: 100%; height: 100%; object-fit: cover;
-  filter: grayscale(30%);
-  transition: transform .6s ease;
-}
-.ba-card:hover img { transform: scale(1.04); }
-.ba-before span, .ba-after span {
-  position: absolute; bottom: 10px; left: 10px;
-  font-size: 9px; letter-spacing: 2px;
-  background: rgba(0,0,0,.65); padding: 5px 10px;
-  color: #fff;
-}
-.ba-card > p {
-  padding: 16px 18px;
-  font-family: "DM Serif Display", serif;
-  font-size: 1.15rem;
-  color: var(--soft);
 }
 
 /* TESTIMONIALS */
@@ -482,7 +442,6 @@ h2 em { font-style: italic; color: #aaa; }
 }
 
 @media (max-width: 800px) {
-  .ba-grid { grid-template-columns: 1fr; }
   .testimonials { grid-template-columns: 1fr; }
 }
 
@@ -774,7 +733,6 @@ footer strong { color: var(--gold); }
   <div class="navlinks">
     <a href="#services">Services</a>
     <a href="#gallery">Gallery</a>
-    <a href="#results">Results</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Book Online</a>
   </div>
@@ -806,7 +764,7 @@ footer strong { color: var(--gold); }
     <p class="lead">Tap any category to explore its services and prices. Every detail is presented with the care of a luxury beauty studio.</p>
   </div>
   <div class="services">
-    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1200&q=85')">
+    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=90')">
       <div class="service-photo"></div>
       <button class="service-open" type="button" aria-expanded="false">
         <span class="num">01</span>
@@ -821,7 +779,7 @@ footer strong { color: var(--gold); }
         <li>Rica Wax — ₹500</li>
       </ul></div>
     </article>
-    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85')">
+    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=90')">
       <div class="service-photo"></div>
       <button class="service-open" type="button" aria-expanded="false">
         <span class="num">02</span>
@@ -836,7 +794,7 @@ footer strong { color: var(--gold); }
         <li>Mamaearth — ₹600</li>
       </ul></div>
     </article>
-    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85')">
+    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1200&q=90')">
       <div class="service-photo"></div>
       <button class="service-open" type="button" aria-expanded="false">
         <span class="num">03</span>
@@ -850,7 +808,7 @@ footer strong { color: var(--gold); }
         <li>Argan Oil — ₹500</li>
       </ul></div>
     </article>
-    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=85')">
+    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1200&q=90')">
       <div class="service-photo"></div>
       <button class="service-open" type="button" aria-expanded="false">
         <span class="num">04</span>
@@ -862,7 +820,7 @@ footer strong { color: var(--gold); }
         <li>Eyebrow shaping — ₹50</li>
       </ul></div>
     </article>
-    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=1200&q=85')">
+    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=90')">
       <div class="service-photo"></div>
       <button class="service-open" type="button" aria-expanded="false">
         <span class="num">05</span>
@@ -876,7 +834,7 @@ footer strong { color: var(--gold); }
         <li>Oxyderm — ₹200</li>
       </ul></div>
     </article>
-    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=85')">
+    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=90')">
       <div class="service-photo"></div>
       <button class="service-open" type="button" aria-expanded="false">
         <span class="num">06</span>
@@ -889,7 +847,7 @@ footer strong { color: var(--gold); }
         <li>Bridal Makeup — ₹3,000–₹10,000</li>
       </ul></div>
     </article>
-    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1562322140-8b8f3e6d0e5e?auto=format&fit=crop&w=1200&q=85')">
+    <article class="service reveal service-card" style="--service-img:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=90')">
       <div class="service-photo"></div>
       <button class="service-open" type="button" aria-expanded="false">
         <span class="num">07</span>
@@ -944,55 +902,18 @@ footer strong { color: var(--gold); }
     <p class="lead">A visual glimpse of the beauty artistry behind our signature services — makeup, hair and finishing details.</p>
   </div>
   <div class="gallery-grid">
-    <figure class="gallery-item gallery-wide reveal" data-full="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1600&q=88">
-      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1600&q=88" alt="Premium makeup artistry">
-      <figcaption>MAKEUP • SIGNATURE FINISH</figcaption>
+    <figure class="gallery-item gallery-wide reveal" data-full="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1600&q=90">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1600&q=90" alt="Premium bridal makeup">
+      <figcaption>MAKEUP • BRIDAL GLOW</figcaption>
     </figure>
-    <figure class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=88">
-      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=88" alt="Professional hair styling">
-      <figcaption>HAIR • ELEGANT STYLING</figcaption>
+    <figure class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1000&q=90">
+      <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1000&q=90" alt="Luxury hair styling">
+      <figcaption>HAIR • LUXURY STYLING</figcaption>
     </figure>
-    <figure class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1000&q=88">
-      <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1000&q=88" alt="Beauty care details">
-      <figcaption>BEAUTY • REFINED DETAILS</figcaption>
+    <figure class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=90">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=90" alt="Spa facial treatment">
+      <figcaption>FACIAL • PREMIUM CARE</figcaption>
     </figure>
-  </div>
-</section>
-
-<!-- BEFORE & AFTER -->
-<section class="section" id="results">
-  <div class="section-head reveal">
-    <div class="kicker">Our Work</div>
-    <h2>Before & After<br><em>real transformations.</em></h2>
-    <p class="lead">A glimpse of the results our clients love. (Replace these with your real photos later.)</p>
-  </div>
-  <div class="ba-grid reveal">
-    <div class="ba-card">
-      <div class="ba-images">
-        <div class="ba-before">
-          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=80" alt="Before">
-          <span>BEFORE</span>
-        </div>
-        <div class="ba-after">
-          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="After">
-          <span>AFTER</span>
-        </div>
-      </div>
-      <p>Bridal Makeup</p>
-    </div>
-    <div class="ba-card">
-      <div class="ba-images">
-        <div class="ba-before">
-          <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=600&q=80" alt="Before">
-          <span>BEFORE</span>
-        </div>
-        <div class="ba-after">
-          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="After">
-          <span>AFTER</span>
-        </div>
-      </div>
-      <p>Hair Styling</p>
-    </div>
   </div>
 </section>
 
@@ -1248,7 +1169,7 @@ function animateFollower() {
 }
 animateFollower();
 
-const hoverTargets = document.querySelectorAll('a, button, .service-card, .gallery-item, .cta, .float-wa, .t-card, .ba-card');
+const hoverTargets = document.querySelectorAll('a, button, .service-card, .gallery-item, .cta, .float-wa, .t-card');
 hoverTargets.forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursor.classList.add('hover');
